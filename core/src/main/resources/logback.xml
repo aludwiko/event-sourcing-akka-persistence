@@ -1,0 +1,13 @@
+<configuration scan="true">
+    <jmxConfigurator />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date [%-5level] %logger{36} [%thread] - %X{persistenceId} %msg%n%xException</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

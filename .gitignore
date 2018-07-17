@@ -1,0 +1,28 @@
+# Sbt / Play
+play/logs/
+play/target/
+project/project/*
+project/target/*
+target/
+logs/
+*.abcd
+
+# Intelij Idea
+.idea/
+
+# Git
+**/*.orig
+
+# Mac OS
+.DS_Store
+
+# Binaries
+*.class
+*.pyc
+.nexus_credentials
+
+development/redis_dump
+
+# structure 101 files
+*.hsw
+*.state
