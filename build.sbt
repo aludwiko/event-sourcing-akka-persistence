@@ -13,7 +13,7 @@ lazy val macwireDependencies = Seq(
   "com.softwaremill.common"  %% "tagging" % "2.2.1"
 )
 
-val akkaVersion     = "2.5.13"
+val akkaVersion     = "2.5.14"
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-slf4j"                 % akkaVersion,
   "com.typesafe.akka" %% "akka-stream"                % akkaVersion,
@@ -56,6 +56,7 @@ lazy val testDependencies = Seq(
   "com.typesafe.akka"          %% "akka-stream-testkit"              % akkaVersion,
   "com.github.dnvriend"        %% "akka-persistence-inmemory"        % "2.5.1.1",
   "org.clapper"                %% "classutil"                        % "1.3.0",
+  "com.tngtech.archunit" % "archunit-junit" % "0.8.3"
 ).map(_ % Test)
 
 lazy val `event-sourcing` = project

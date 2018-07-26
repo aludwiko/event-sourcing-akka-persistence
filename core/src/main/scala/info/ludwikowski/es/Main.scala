@@ -3,7 +3,6 @@ package info.ludwikowski.es
 import akka.actor.ActorSystem
 import akka.stream.{ActorMaterializer, Materializer}
 import com.typesafe.config.ConfigFactory
-import info.ludwikowski.base.application.{Clock, UTCClock}
 
 import scala.concurrent.Await
 import scala.concurrent.duration._

@@ -1,13 +1,13 @@
 package info.ludwikowski.es.user.domain
 
-import java.time.LocalDateTime
+import java.time.Instant
 
 import info.ludwikowski.es.user.domain.UserCommand.{CreateUser, UpdateEmail, UpdateName}
 import info.ludwikowski.es.user.domain.UserEvent.{EmailUpdated, NameUpdated, UserCreated}
 
 import scala.util.{Failure, Success, Try}
 
-final case class User private[domain] (userId: UserId, createdAt: LocalDateTime, name: String, email: Email) {
+final case class User private[domain] (userId: UserId, createdAt: Instant, name: String, email: Email) {
 
   def applyEvent(userEvent: UserEvent): Try[User] = userEvent match {
     case _: UserCreated      => Failure(new IllegalStateException("User already created. Event cannot be applied."))
