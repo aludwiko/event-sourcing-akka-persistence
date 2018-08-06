@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package info.ludwikowski.es.user.application.serialization;
+
+import "scalapb/scalapb.proto";
+
+message UserCreatedEvent {
+    string user_id = 1;
+    string operation_id = 2;
+    int64 created_at = 3;
+    string name = 4;
+    string email = 5;
+}
+
+message NameUpdatedEvent {
+    string user_id = 1;
+    string operation_id = 2;
+    int64 created_at = 3;
+    string new_name = 4;
+}
+
+message EmailUpdatedEvent {
+    string user_id = 1;
+    string operation_id = 2;
+    int64 created_at = 3;
+    string new_email = 4;
+}
